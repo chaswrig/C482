@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <HBox layoutY="50.0" prefHeight="300.0" prefWidth="900.0" spacing="50.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <Label text="Parts">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="mainPartsTableView" layoutY="50.0" prefHeight="200.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn fx:id="mainPartsIDCol" prefWidth="75.0" text="Part ID" />
+                      <TableColumn fx:id="mainPartsNameCol" prefWidth="90.0" text="Part Name" />
+                        <TableColumn fx:id="mainPartsInventoryCol" prefWidth="95.0" text="Inventory Level" />
+                        <TableColumn fx:id="mainPartsPriceCol" prefWidth="120.0" text="Price/Cost per Unit" />
+                    </columns>
+                  </TableView>
+                  <HBox layoutX="146.0" layoutY="261.0" prefHeight="50.0" prefWidth="244.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#onActionMainPartsAdd" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#onActionMainPartsModify" text="Modify" />
+                        <Button mnemonicParsing="false" onAction="#onActionMainPartsDelete" text="Delete" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="175.0" layoutY="14.0" prefHeight="50.0" prefWidth="215.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onActionMainPartsSearch" text="Search" />
+                        <TextField fx:id="mainPartsTxt" onMouseClicked="#partSearchTextClick" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <Label text="Products">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="mainProductsTableView" layoutY="50.0" prefHeight="200.0" prefWidth="400.0">
+                     <columns>
+                        <TableColumn fx:id="mainProductsIDCol" prefWidth="75.0" text="Part ID" />
+                        <TableColumn fx:id="mainProductsNameCol" prefWidth="90.0" text="Part Name" />
+                        <TableColumn fx:id="mainProductsInventoryCol" prefWidth="95.0" text="Inventory Level" />
+                        <TableColumn fx:id="mainProductsPriceCol" prefWidth="120.0" text="Price/Cost per Unit" />
+                     </columns>
+                  </TableView>
+                  <HBox layoutX="146.0" layoutY="261.0" prefHeight="50.0" prefWidth="244.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onActionMainProductsAdd" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#onActionMainProductsModify" text="Modify" />
+                        <Button mnemonicParsing="false" onAction="#onActionMainProductsDelete" text="Delete" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="175.0" layoutY="14.0" prefHeight="50.0" prefWidth="215.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onActionMainProdutcsSearch" text="Search" />
+                        <TextField fx:id="mainProductsTxt" onMouseClicked="#productSearchTextClick" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Pane>
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="14.0" layoutY="14.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="764.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionMainExit" prefHeight="25.0" prefWidth="65.0" text="Exit" />
+   </children>
+</AnchorPane>
